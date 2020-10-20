@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * Description of the Class
+ * Classe da Janela da Aplicação.
  *
  * @author Osmar de Oliveira Braz Junior
  * @created 14 de Abril de 2007
@@ -31,14 +31,14 @@ public class FrmTriangulo extends JFrame {
     private JButton jBFechar;
 
     /**
-     * Constructor for the FrmTriangulo object
+     * Construtor para o objeto FrmTriangulo.
      */
     public FrmTriangulo() {
         inicializar();
     }
 
     /**
-     * Description of the Method
+     * Inicializa a janela e seus componentes. 
      */
     private void inicializar() {
         contentPane = (JPanel) this.getContentPane();
@@ -115,7 +115,8 @@ public class FrmTriangulo extends JFrame {
         EntTriangulo triangulo = new EntTriangulo();
         triangulo.setBase(Double.parseDouble(jTBase.getText()));
         triangulo.setAltura(Double.parseDouble(jTAltura.getText()));
-        jLArea.setText("Area :" + triangulo.getArea());
+        double area = triangulo.getArea();
+        jLArea.setText("Area :" + area);
     }
 
     /**
